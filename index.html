@@ -204,6 +204,33 @@
             border-radius: 0 5px 5px 0;
             margin: 20px 0;
         }
+
+    /* --- CSS UNTUK GALERI FOTO --- */
+        .galeri-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 15px;
+            margin-top: 15px;
+        }
+        .galeri-item {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            transition: transform 0.3s;
+            background-color: #e2e8f0;
+        }
+        .galeri-item:hover {
+            transform: scale(1.05); /* Efek membesar saat disentuh */
+        }
+        .galeri-caption {
+            text-align: center;
+            font-size: 0.9rem;
+            color: var(--text-color);
+            margin-top: 8px;
+            font-style: italic;
+        }
     </style>
 </head>
 <body>
@@ -230,6 +257,7 @@
         <a href="#pengurus">Data Pengurus</a>
         <a href="#keuangan">Transparansi Keuangan</a>
         <a href="#kegiatan">Kegiatan Lingkungan</a>
+        <a href="#galeri">Galeri Foto</a>
     </nav>
 
     <div class="container">
