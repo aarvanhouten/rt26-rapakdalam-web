@@ -27,12 +27,16 @@
             line-height: 1.6;
         }
         
-        /* --- CSS HEADER BARU (KIRI - TENGAH - KANAN) --- */
+        /* --- CSS HEADER DENGAN KORAK / MOTIF DAYAK --- */
         header {
-            background-color: var(--primary);
+            /* Memadukan warna hijau transparan dengan gambar motif dayak di background */
+            background-image: linear-gradient(rgba(21, 128, 61, 0.90), rgba(22, 101, 52, 0.90)), url('motif-dayak.jpg');
+            background-size: cover;          /* Menyesuaikan ukuran agar menutupi header */
+            background-position: center;     /* Posisi gambar di tengah */
             color: white;
-            padding: 2rem 1rem;
+            padding: 2.5rem 1rem;
             box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+            border-bottom: 4px solid #ca8a04; /* Memberikan aksen garis emas/kuning khas Dayak di bawah header */
         }
         .header-inner {
             display: flex;
