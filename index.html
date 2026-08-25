@@ -19,24 +19,28 @@
             color: var(--text-color);
             line-height: 1.6;
         }
+        
+        /* --- CSS HEADER BARU (KIRI - TENGAH - KANAN) --- */
         header {
             background-color: var(--primary);
             color: white;
-            padding: 2.5rem 1rem;
-            text-align: center;
+            padding: 2rem 1rem;
             box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
         }
-        /* CSS UNTUK LOGO DI HEADER */
-        .logo-container {
+        .header-inner {
             display: flex;
-            justify-content: center;
+            justify-content: space-between;
             align-items: center;
-            gap: 20px;
-            margin-bottom: 20px;
-            flex-wrap: wrap;
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+        .header-text {
+            text-align: center;
+            flex-grow: 1;
+            padding: 0 15px;
         }
         .logo-img {
-            height: 80px;
+            height: 90px; /* Ukuran logo */
             width: auto;
             background-color: white;
             padding: 5px;
@@ -53,6 +57,26 @@
             font-size: 1.1rem;
             opacity: 0.9;
         }
+        /* Penyesuaian untuk tampilan HP (layar kecil) */
+        @media (max-width: 768px) {
+            .header-inner {
+                flex-wrap: wrap;
+                justify-content: space-evenly;
+            }
+            .header-text {
+                width: 100%;
+                order: 3; /* Teks pindah ke bawah logo */
+                margin-top: 15px;
+            }
+            .logo-img {
+                height: 65px; /* Logo agak dikecilkan di HP */
+            }
+            header h1 {
+                font-size: 1.8rem;
+            }
+        }
+        /* ----------------------------------------------- */
+
         nav {
             background-color: var(--secondary);
             display: flex;
@@ -183,21 +207,22 @@
     </style>
 </head>
 <body>
+
     <header>
+        <!-- STRUKTUR HEADER BARU -->
         <div class="header-inner">
-        <!-- Elemen 1 (Kiri): Logo Samarinda -->
-        <img src="logo-samarinda.png" alt="Logo Kota Samarinda" class="logo-img">
-        
-        <!-- Elemen 2 (Tengah): Teks Judul -->
-        <div class="header-text">
-            <h1>Website Resmi RT 26</h1>
-            <p>Kelurahan Rapak Dalam, Kecamatan Loa Janan Ilir, Kota Samarinda</p>
+            <!-- Logo Kiri -->
+            <img src="logo-samarinda.png" alt="Logo Kota Samarinda" class="logo-img">
+            
+            <!-- Teks Tengah -->
+            <div class="header-text">
+                <h1>Website Resmi RT 26</h1>
+                <p>Kelurahan Rapak Dalam, Kecamatan Loa Janan Ilir, Kota Samarinda</p>
+            </div>
+            
+            <!-- Logo Kanan -->
+            <img src="logo-rt.png" alt="Logo RT 26" class="logo-img">
         </div>
-        
-        <!-- Elemen 3 (Kanan): Logo RT -->
-        <img src="logo-rt.png" alt="Logo RT 26" class="logo-img">
-    </div>
-       
     </header>
 
     <nav>
@@ -294,7 +319,7 @@
                 <!-- Ketua PKK -->
                 <div class="pengurus-card">
                     <img src="foto-ketua-pkk.jpg" alt="Foto Ketua PKK" class="pengurus-foto">
-                    <p class="pengurus-nama">Ibu [Sri Sumarsih]</p>
+                    <p class="pengurus-nama">Ibu [Nama Ketua PKK]</p>
                     <p class="pengurus-jabatan">Ketua PKK</p>
                 </div>
                 <!-- Ketua Posyandu -->
