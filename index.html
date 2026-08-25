@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Website Resmi RT 26 Rapak Dalam</title>
+    <style>
+        :root {
+            --primary: #15803d; /* Warna hijau elegan */
+            --secondary: #166534;
+            --bg-color: #f8fafc;
+            --text-color: #334155;
+        }
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            line-height: 1.6;
+        }
+        header {
+            background-color: var(--primary);
+            color: white;
+            padding: 2.5rem 1rem;
+            text-align: center;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+        }
+        header h1 {
+            margin: 0;
+            font-size: 2.5rem;
+        }
+        header p {
+            margin: 10px 0 0;
+            font-size: 1.1rem;
+            opacity: 0.9;
+        }
+        nav {
+            background-color: var(--secondary);
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            padding: 0.5rem;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+        nav a {
+            color: white;
+            text-decoration: none;
+            padding: 10px 20px;
+            margin: 5px;
+            border-radius: 5px;
+            font-weight: 600;
+            transition: background 0.3s;
+        }
+        nav a:hover {
+            background-color: rgba(255,255,255,0.2);
+        }
+        .container {
+            max-width: 1000px;
+            margin: 30px auto;
+            padding: 0 20px;
+        }
+        .card {
+            background: white;
+            border-radius: 10px;
+            padding: 30px;
+            margin-bottom: 30px;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+            border-top: 4px solid var(--primary);
+        }
+        h2 {
+            color: var(--secondary);
+            margin-top: 0;
+            border-bottom: 2px solid #e2e8f0;
+            padding-bottom: 10px;
+        }
+        h3 {
+            color: var(--primary);
+        }
+        ul {
+            padding-left: 20px;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+            overflow-x: auto;
+            display: block;
+        }
+        th, td {
+            border: 1px solid #e2e8f0;
+            padding: 12px 15px;
+            text-align: left;
+        }
+        th {
+            background-color: var(--primary);
+            color: white;
+            white-space: nowrap;
+        }
+        tr:nth-child(even) {
+            background-color: #f8fafc;
+        }
+        .grid-2 {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+        }
+        @media (max-width: 768px) {
+            .grid-2 {
+                grid-template-columns: 1fr;
+            }
+        }
+        footer {
+            background-color: #1e293b;
+            color: white;
+            text-align: center;
+            padding: 20px;
+            margin-top: 40px;
+        }
+        .highlight {
+            background-color: #dcfce7;
+            padding: 15px;
+            border-left: 4px solid var(--primary);
+            border-radius: 0 5px 5px 0;
+            margin: 20px 0;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Website Resmi RT 26</h1>
+        <p>Kelurahan Rapak Dalam, Kecamatan Loa Janan Ilir, Kota Samarinda</p>
+    </header>
+
+    <nav>
+        <a href="#profil">Profil & Visi Misi</a>
+        <a href="#pengurus">Data Pengurus</a>
+        <a href="#keuangan">Transparansi Keuangan</a>
+        <a href="#kegiatan">Kegiatan Lingkungan</a>
+    </nav>
+
+    <div class="container">
+        
+        <!-- PROFIL & VISI MISI -->
+        <div class="card" id="profil">
+            <h2>Profil & Visi Misi</h2>
+            <p>Selamat datang di portal informasi resmi RT 26 Kelurahan Rapak Dalam. Website ini hadir sebagai wujud komitmen kami dalam menciptakan lingkungan yang transparan, rukun, dan bergotong royong.</p>
+            
+            <div class="grid-2">
+                <div>
+                    <h3>Visi</h3>
+                    <p>Mewujudkan lingkungan RT 26 yang bersih, aman, agamis, rukun, dan sejahtera dengan sistem kepengurusan yang transparan, responsif, dan amanah.</p>
+                </div>
+                <div>
+                    <h3>Misi</h3>
+                    <ul>
+                        <li>Menumbuhkan semangat gotong royong dan kepedulian sosial antar warga.</li>
+                        <li>Meningkatkan sistem keamanan lingkungan (Siskamling) secara swadaya.</li>
+                        <li>Mengelola keuangan RT secara terbuka, jujur, dan dapat diakses seluruh warga.</li>
+                        <li>Mendukung penuh kegiatan ibu-ibu PKK dan optimalisasi Posyandu untuk kesejahteraan keluarga.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- DATA PENGURUS -->
+        <div class="card" id="pengurus">
+            <h2>Data Susunan Pengurus</h2>
+            
+            <div class="grid-2">
+                <div>
+                    <h3>Pengurus Inti RT 26</h3>
+                    <ul>
+                        <li><strong>Ketua RT:</strong> Bpk. [Nama Ketua RT]</li>
+                        <li><strong>Sekretaris:</strong> [Nama Sekretaris]</li>
+                        <li><strong>Bendahara:</strong> [Nama Bendahara]</li>
+                        <li><strong>Seksi Keamanan:</strong> [Nama Seksi Keamanan]</li>
+                        <li><strong>Seksi Kebersihan:</strong> [Nama Seksi Kebersihan]</li>
+                    </ul>
+                </div>
+                <div>
+                    <h3>Pengurus PKK RT 26</h3>
+                    <ul>
+                        <li><strong>Ketua PKK:</strong> Ibu [Nama Ketua PKK]</li>
+                        <li><strong>Sekretaris:</strong> Ibu [Nama Sekretaris]</li>
+                        <li><strong>Bendahara:</strong> Ibu [Nama Bendahara]</li>
+                        <li><strong>Pokja 1-4:</strong> [Nama Kader]</li>
+                    </ul>
+                </div>
+            </div>
+
+            <hr style="border:1px solid #e2e8f0; margin: 20px 0;">
+
+            <h3>Anggota / Kader Posyandu</h3>
+            <ul>
+                <li><strong>Ketua Kader Posyandu:</strong> Ibu [Nama Ketua]</li>
+                <li><strong>Kader Meja 1 (Pendaftaran):</strong> Ibu [Nama Kader]</li>
+                <li><strong>Kader Meja 2 (Penimbangan):</strong> Ibu [Nama Kader]</li>
+                <li><strong>Kader Meja 3 (Pencatatan):</strong> Ibu [Nama Kader]</li>
+                <li><strong>Kader Meja 4 (Penyuluhan):</strong> Ibu [Nama Kader]</li>
+            </ul>
+        </div>
+
+        <!-- TRANSPARANSI KEUANGAN -->
+        <div class="card" id="keuangan">
+            <h2>Sumber & Transparansi Keuangan</h2>
+            
+            <div class="highlight">
+                <strong>Informasi Iuran Bulanan:</strong> Sesuai hasil musyawarah warga, iuran wajib bulanan ditetapkan sebesar <strong>Rp [Nominal]/KK</strong>. Pembayaran paling lambat tanggal 10 setiap bulannya melalui Bendahara RT atau transfer ke rekening Kas RT 26.
+            </div>
+
+            <p>Dana iuran dialokasikan sepenuhnya untuk:</p>
+            <ul>
+                <li>Operasional pengangkutan sampah lingkungan.</li>
+                <li>Pemeliharaan fasilitas umum dan pos kamling.</li>
+                <li>Kas sosial (menjenguk warga sakit/kemalangan).</li>
+                <li>Dukungan kegiatan PKK dan Posyandu.</li>
+            </ul>
+
+            <h3>Laporan Kas Bulan Ini</h3>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Tanggal</th>
+                        <th>Keterangan Transaksi</th>
+                        <th>Pemasukan (Rp)</th>
+                        <th>Pengeluaran (Rp)</th>
+                        <th>Saldo Akhir (Rp)</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>01-Sep-2026</td>
+                        <td>Saldo awal bulan</td>
+                        <td>2.500.000</td>
+                        <td>-</td>
+                        <td>2.500.000</td>
+                    </tr>
+                    <tr>
+                        <td>05-Sep-2026</td>
+                        <td>Kumpulan iuran warga (50 KK)</td>
+                        <td>2.500.000</td>
+                        <td>-</td>
+                        <td>5.000.000</td>
+                    </tr>
+                    <tr>
+                        <td>10-Sep-2026</td>
+                        <td>Bayar petugas sampah bulan ini</td>
+                        <td>-</td>
+                        <td>1.000.000</td>
+                        <td>4.000.000</td>
+                    </tr>
+                    <tr>
+                        <td>15-Sep-2026</td>
+                        <td>Konsumsi kegiatan Posyandu</td>
+                        <td>-</td>
+                        <td>300.000</td>
+                        <td>3.700.000</td>
+                    </tr>
+                </tbody>
+            </table>
+            <p style="font-size: 0.9rem; color: #64748b; margin-top: 10px;"><em>*Laporan ini diperbarui setiap akhir bulan. Warga berhak meminta rincian nota kepada Bendahara.</em></p>
+        </div>
+
+        <!-- KEGIATAN LINGKUNGAN -->
+        <div class="card" id="kegiatan">
+            <h2>Kegiatan Lingkungan</h2>
+            
+            <ul>
+                <li><strong>Kerja Bakti Rutin (Jumat Bersih):</strong> Dilaksanakan pada minggu pertama setiap awal bulan. Fokus pada pembersihan parit/selokan dan pemotongan rumput fasilitas umum.</li>
+                <li><strong>Pelayanan Posyandu:</strong> Dilaksanakan rutin setiap tanggal 15 bertempat di Posko RT 26. Melayani penimbangan balita, pemberian vitamin, dan pemeriksaan kesehatan dasar lansia.</li>
+                <li><strong>Siskamling / Ronda Malam:</strong> Jadwal piket bergilir setiap malam mulai pukul 23:00 hingga 04:00 WITA untuk menjaga keamanan lingkungan.</li>
+                <li><strong>Arisan & Pertemuan PKK:</strong> Dilaksanakan pada minggu kedua setiap bulan sebagai wadah silaturahmi dan pemberdayaan perempuan di lingkungan RT 26.</li>
+            </ul>
+        </div>
+
+    </div>
+
+    <footer>
+        <p>&copy; 2026 Pengurus RT 26, Kel. Rapak Dalam, Kec. Loa Janan Ilir, Kota Samarinda.</p>
+    </footer>
+
+</body>
+</html>
