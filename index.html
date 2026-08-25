@@ -10,6 +10,7 @@
             --secondary: #166534;
             --bg-color: #f8fafc;
             --text-color: #334155;
+            --accent-gold: #ca8a04;
         }
         body {
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -17,26 +18,25 @@
             padding: 0;
             
             /* --- KODE BACKGROUND SAMARINDA --- */
-            background-image: linear-gradient(rgba(21, 128, 61, 0.35), rgba(22, 101, 52, 0.35)), url('bg-samarinda.jpg');
-            background-size: cover;          /* Agar foto menutupi seluruh layar */
-            background-position: center;     /* Posisi foto di tengah */
-            background-attachment: fixed;    /* Agar background tetap diam saat halaman di-scroll */
+            background-image: linear-gradient(rgba(21, 128, 61, 0.50), rgba(22, 101, 52, 0.50)), url('bg-samarinda.jpg');
+            background-size: cover;          
+            background-position: center;     
+            background-attachment: fixed;    
             /* --------------------------------- */
 
             color: var(--text-color);
             line-height: 1.6;
         }
         
-        /* --- CSS HEADER DENGAN KORAK / MOTIF DAYAK --- */
+        /* --- CSS HEADER DENGAN MOTIF DAYAK --- */
         header {
-            /* Memadukan warna hijau transparan dengan gambar motif dayak di background */
-            background-image: linear-gradient(rgba(21, 128, 61, 0.20), rgba(22, 101, 52, 0.20)), url('motif-dayak.jpg');
-            background-size: cover;          /* Menyesuaikan ukuran agar menutupi header */
-            background-position: center;     /* Posisi gambar di tengah */
+            background-image: linear-gradient(rgba(21, 128, 61, 0.88), rgba(22, 101, 52, 0.88)), url('motif-dayak.jpg');
+            background-size: cover;          
+            background-position: center;     
             color: white;
-            padding: 2.5rem 1rem;
+            padding: 2rem 1rem;
             box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
-            border-bottom: 4px solid #ca8a04; /* Memberikan aksen garis emas/kuning khas Dayak di bawah header */
+            border-bottom: 4px solid var(--accent-gold);
         }
         .header-inner {
             display: flex;
@@ -51,7 +51,7 @@
             padding: 0 15px;
         }
         .logo-img {
-            height: 90px; /* Ukuran logo */
+            height: 90px; 
             width: auto;
             background-color: white;
             padding: 5px;
@@ -62,13 +62,14 @@
         header h1 {
             margin: 0;
             font-size: 2.5rem;
+            text-shadow: 0 2px 4px rgba(0,0,0,0.3);
         }
         header p {
             margin: 10px 0 0;
             font-size: 1.1rem;
-            opacity: 0.9;
+            opacity: 0.95;
         }
-        /* Penyesuaian untuk tampilan HP (layar kecil) */
+
         @media (max-width: 768px) {
             .header-inner {
                 flex-wrap: wrap;
@@ -76,17 +77,16 @@
             }
             .header-text {
                 width: 100%;
-                order: 3; /* Teks pindah ke bawah logo */
+                order: 3; 
                 margin-top: 15px;
             }
             .logo-img {
-                height: 65px; /* Logo agak dikecilkan di HP */
+                height: 65px; 
             }
             header h1 {
                 font-size: 1.8rem;
             }
         }
-        /* ----------------------------------------------- */
 
         nav {
             background-color: var(--secondary);
@@ -97,6 +97,7 @@
             position: sticky;
             top: 0;
             z-index: 100;
+            border-bottom: 2px solid var(--accent-gold);
         }
         nav a {
             color: white;
@@ -116,11 +117,12 @@
             padding: 0 20px;
         }
         .card {
-            background: white;
+            background: rgba(255, 255, 255, 0.96);
+            backdrop-filter: blur(5px);
             border-radius: 10px;
             padding: 30px;
             margin-bottom: 30px;
-            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
             border-top: 4px solid var(--primary);
         }
         h2 {
@@ -160,13 +162,30 @@
             grid-template-columns: 1fr 1fr;
             gap: 20px;
         }
-        /* CSS UNTUK FOTO PENGURUS */
-        .pengurus-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
-            gap: 20px;
-            margin-top: 20px;
+        
+        /* --- CSS UNTUK STRUKTUR MENURUN 1, 2, 5 --- */
+        .row-1 {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 20px;
         }
+        .row-2 {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 20px;
+            margin-bottom: 20px;
+            max-width: 700px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        .row-5 {
+            display: grid;
+            grid-template-columns: repeat(5, 1fr);
+            gap: 15px;
+            margin-bottom: 20px;
+        }
+
+        /* --- CSS UNTUK FOTO PENGURUS --- */
         .pengurus-card {
             background: #f1f5f9;
             padding: 20px 15px;
@@ -188,25 +207,31 @@
             font-weight: bold;
             color: var(--text-color);
             margin: 5px 0 0 0;
-            font-size: 1.1rem;
+            font-size: 1rem;
         }
         .pengurus-jabatan {
             color: var(--primary);
-            font-size: 0.9rem;
+            font-size: 0.85rem;
             margin: 0;
             font-weight: 600;
         }
+
         @media (max-width: 768px) {
             .grid-2 {
                 grid-template-columns: 1fr;
             }
+            .row-2, .row-5 {
+                grid-template-columns: 1fr;
+            }
         }
+        
         footer {
             background-color: #1e293b;
             color: white;
             text-align: center;
             padding: 20px;
             margin-top: 40px;
+            border-top: 4px solid var(--accent-gold);
         }
         .highlight {
             background-color: #dcfce7;
@@ -216,7 +241,7 @@
             margin: 20px 0;
         }
 
-    /* --- CSS UNTUK GALERI FOTO --- */
+        /* --- CSS UNTUK GALERI FOTO --- */
         .galeri-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
@@ -233,7 +258,7 @@
             background-color: #e2e8f0;
         }
         .galeri-item:hover {
-            transform: scale(1.05); /* Efek membesar saat disentuh */
+            transform: scale(1.05); 
         }
         .galeri-caption {
             text-align: center;
@@ -247,18 +272,12 @@
 <body>
 
     <header>
-        <!-- STRUKTUR HEADER BARU -->
         <div class="header-inner">
-            <!-- Logo Kiri -->
             <img src="logo-samarinda.png" alt="Logo Kota Samarinda" class="logo-img">
-            
-            <!-- Teks Tengah -->
             <div class="header-text">
                 <h1>Website Resmi RT 26</h1>
                 <p>Kelurahan Rapak Dalam, Kecamatan Loa Janan Ilir, Kota Samarinda</p>
             </div>
-            
-            <!-- Logo Kanan -->
             <img src="logo-rt.png" alt="Logo RT 26" class="logo-img">
         </div>
     </header>
@@ -300,50 +319,52 @@
             <h2>Data Susunan Pengurus</h2>
             
             <h3>Pengurus Inti & Seksi-Seksi RT 26</h3>
-            <div class="pengurus-grid">
-                <!-- Ketua RT -->
-                <div class="pengurus-card">
+            
+            <!-- BARIS 1: 1 Orang (Ketua RT) -->
+            <div class="row-1">
+                <div class="pengurus-card" style="width: 240px;">
                     <img src="foto-ketua.jpg" alt="Foto Ketua RT" class="pengurus-foto">
                     <p class="pengurus-nama">Bpk. Eko Mujianto</p>
                     <p class="pengurus-jabatan">Ketua RT</p>
                 </div>
-                <!-- Sekretaris -->
+            </div>
+
+            <!-- BARIS 2: 2 Orang (Sekretaris & Bendahara) -->
+            <div class="row-2">
                 <div class="pengurus-card">
                     <img src="foto-sekretaris.jpg" alt="Foto Sekretaris" class="pengurus-foto">
                     <p class="pengurus-nama">Bpk. Dody Novanto</p>
                     <p class="pengurus-jabatan">Sekretaris</p>
                 </div>
-                <!-- Bendahara -->
                 <div class="pengurus-card">
                     <img src="foto-bendahara.jpg" alt="Foto Bendahara" class="pengurus-foto">
                     <p class="pengurus-nama">Bpk. Iwan Priyanto</p>
                     <p class="pengurus-jabatan">Bendahara</p>
                 </div>
-                <!-- Seksi Keamanan -->
+            </div>
+
+            <!-- BARIS 3: 5 Orang (Seksi-Seksi) -->
+            <div class="row-5">
                 <div class="pengurus-card">
                     <img src="foto-keamanan.jpg" alt="Foto Seksi Keamanan" class="pengurus-foto">
                     <p class="pengurus-nama">Bpk. Muhammad Rohman</p>
                     <p class="pengurus-jabatan">Seksi Keamanan</p>
                 </div>
-                <!-- Seksi Kebersihan -->
                 <div class="pengurus-card">
                     <img src="foto-kebersihan.jpg" alt="Foto Seksi Kebersihan" class="pengurus-foto">
                     <p class="pengurus-nama">Bpk. Fajar Aswandi</p>
                     <p class="pengurus-jabatan">Seksi Kebersihan</p>
                 </div>
-                <!-- Seksi Kesejahteraan dan Keagamaan -->
                 <div class="pengurus-card">
                     <img src="foto-kesejahteraan.jpg" alt="Foto Seksi Kesejahteraan" class="pengurus-foto">
                     <p class="pengurus-nama">Bpk. Suyono Achmad Fatoni</p>
                     <p class="pengurus-jabatan">Seksi Kesejahteraan & Keagamaan</p>
                 </div>
-                <!-- Seksi Pembangunan -->
                 <div class="pengurus-card">
                     <img src="foto-pembangunan.jpg" alt="Foto Seksi Pembangunan" class="pengurus-foto">
                     <p class="pengurus-nama">Bpk. Supardi</p>
                     <p class="pengurus-jabatan">Seksi Pembangunan</p>
                 </div>
-                <!-- Seksi Ekonomi dan Usaha RT -->
                 <div class="pengurus-card">
                     <img src="foto-ekonomi.jpg" alt="Foto Seksi Ekonomi" class="pengurus-foto">
                     <p class="pengurus-nama">Bpk. Iduar Rahman</p>
@@ -353,32 +374,63 @@
 
             <hr style="border:1px solid #e2e8f0; margin: 30px 0;">
 
-            <h3>Pengurus PKK & Kader Posyandu</h3>
-            <div class="pengurus-grid">
-                <!-- Ketua PKK -->
-                <div class="pengurus-card">
+            <h3>Pengurus PKK RT 26</h3>
+            <!-- BARIS 1: 1 Orang (Ketua PKK) -->
+            <div class="row-1">
+                <div class="pengurus-card" style="width: 240px;">
                     <img src="foto-ketua-pkk.jpg" alt="Foto Ketua PKK" class="pengurus-foto">
-                    <p class="pengurus-nama">Ibu [Sri Sumarsih]</p>
+                    <p class="pengurus-nama">Ibu Sri Sumarsih</p>
                     <p class="pengurus-jabatan">Ketua PKK</p>
                 </div>
-                <!-- Ketua Posyandu -->
+            </div>
+            <!-- BARIS BERIKUTNYA: Anggota PKK (Misal 3 orang sejajar) -->
+            <div class="row-2" style="max-width: 100%; grid-template-columns: repeat(3, 1fr);">
                 <div class="pengurus-card">
+                    <img src="foto-pkk-1.jpg" alt="Anggota PKK" class="pengurus-foto">
+                    <p class="pengurus-nama">Ibu [Nama Anggota]</p>
+                    <p class="pengurus-jabatan">Sekretaris PKK</p>
+                </div>
+                <div class="pengurus-card">
+                    <img src="foto-pkk-2.jpg" alt="Anggota PKK" class="pengurus-foto">
+                    <p class="pengurus-nama">Ibu [Nama Anggota]</p>
+                    <p class="pengurus-jabatan">Bendahara PKK</p>
+                </div>
+                <div class="pengurus-card">
+                    <img src="foto-pkk-3.jpg" alt="Anggota PKK" class="pengurus-foto">
+                    <p class="pengurus-nama">Ibu [Nama Anggota]</p>
+                    <p class="pengurus-jabatan">Kader Pokja / Anggota</p>
+                </div>
+            </div>
+
+            <hr style="border:1px solid #e2e8f0; margin: 30px 0;">
+
+            <h3>Kader & Anggota Posyandu RT 26</h3>
+            <!-- BARIS 1: 1 Orang (Ketua Posyandu) -->
+            <div class="row-1">
+                <div class="pengurus-card" style="width: 240px;">
                     <img src="foto-ketua-posyandu.jpg" alt="Foto Ketua Posyandu" class="pengurus-foto">
                     <p class="pengurus-nama">Ibu [Nama Ketua]</p>
                     <p class="pengurus-jabatan">Ketua Kader Posyandu</p>
                 </div>
             </div>
-
-            <hr style="border:1px solid #e2e8f0; margin: 20px 0;">
-
-            <h3>Anggota / Kader Posyandu (Lengkap)</h3>
-            <ul>
-                <li><strong>Ketua Kader Posyandu:</strong> Ibu [Nama Ketua]</li>
-                <li><strong>Kader Meja 1 (Pendaftaran):</strong> Ibu [Nama Kader]</li>
-                <li><strong>Kader Meja 2 (Penimbangan):</strong> Ibu [Nama Kader]</li>
-                <li><strong>Kader Meja 3 (Pencatatan):</strong> Ibu [Nama Kader]</li>
-                <li><strong>Kader Meja 4 (Penyuluhan):</strong> Ibu [Nama Kader]</li>
-            </ul>
+            <!-- BARIS BERIKUTNYA: Anggota Posyandu (Misal 3 orang sejajar) -->
+            <div class="row-2" style="max-width: 100%; grid-template-columns: repeat(3, 1fr);">
+                <div class="pengurus-card">
+                    <img src="foto-posyandu-1.jpg" alt="Kader Posyandu" class="pengurus-foto">
+                    <p class="pengurus-nama">Ibu [Nama Kader]</p>
+                    <p class="pengurus-jabatan">Kader Meja 1 (Pendaftaran)</p>
+                </div>
+                <div class="pengurus-card">
+                    <img src="foto-posyandu-2.jpg" alt="Kader Posyandu" class="pengurus-foto">
+                    <p class="pengurus-nama">Ibu [Nama Kader]</p>
+                    <p class="pengurus-jabatan">Kader Meja 2 (Penimbangan)</p>
+                </div>
+                <div class="pengurus-card">
+                    <img src="foto-posyandu-3.jpg" alt="Kader Posyandu" class="pengurus-foto">
+                    <p class="pengurus-nama">Ibu [Nama Kader]</p>
+                    <p class="pengurus-jabatan">Kader Meja 3 & 4 (Penyuluhan)</p>
+                </div>
+            </div>
         </div>
 
         <!-- TRANSPARANSI KEUANGAN -->
@@ -416,16 +468,16 @@
                     <tr>
                         <td>01-Juli-2026</td>
                         <td>Kumpulan iuran warga (50 KK)</td>
-                        <td>00</td>
+                        <td>2.500.000</td>
                         <td>-</td>
-                        <td>00</td>
+                        <td>2.500.000</td>
                     </tr>
                     <tr>
                         <td>10-Sep-2026</td>
                         <td>Pembelian Lampu</td>
                         <td>-</td>
-                        <td>00</td>
-                        <td>00</td>
+                        <td>1.000.000</td>
+                        <td>1.500.000</td>
                     </tr>
                 </tbody>
             </table>
@@ -439,7 +491,7 @@
             <ul>
                 <li><strong>Kerja Bakti Rutin (Jumat Bersih):</strong> Dilaksanakan pada minggu pertama setiap awal bulan. Fokus pada pembersihan parit/selokan dan pemotongan rumput fasilitas umum.</li>
                 <li><strong>Pelayanan Posyandu:</strong> Dilaksanakan rutin setiap tanggal 15 bertempat di Posko RT 26. Melayani penimbangan balita, pemberian vitamin, dan pemeriksaan kesehatan dasar lansia.</li>
-                <li><strong>Siskamling / Ronda Malam:</strong> Jadwal piket bergilir setiap malam mulai pukul 23:00 hingga 04:00 WITA untuk menjaga keamanan lingkungan.</li>
+                <li><strong>Siskamling / Ronda Malam:</strong> Jadwal piket bergilir setiap malam mulai pukul 00 hingga 04:00 WITA untuk menjaga keamanan lingkungan.</li>
                 <li><strong>Arisan & Pertemuan PKK:</strong> Dilaksanakan pada minggu kedua setiap bulan sebagai wadah silaturahmi dan pemberdayaan perempuan di lingkungan RT 26.</li>
             </ul>
         </div>
